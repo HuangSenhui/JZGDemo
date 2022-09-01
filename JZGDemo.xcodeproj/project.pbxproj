@@ -13,6 +13,11 @@
 		8B837BF328C0E533002C7FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B837BF128C0E533002C7FD8 /* Main.storyboard */; };
 		8B837BF528C0E535002C7FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B837BF428C0E535002C7FD8 /* Assets.xcassets */; };
 		8B837BF828C0E535002C7FD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B837BF628C0E535002C7FD8 /* LaunchScreen.storyboard */; };
+		8B837C0328C0EB0D002C7FD8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0228C0EB0D002C7FD8 /* Account.swift */; };
+		8B837C0628C0ECBE002C7FD8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0528C0ECBE002C7FD8 /* LoginView.swift */; };
+		8B837C0828C0ECED002C7FD8 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0728C0ECED002C7FD8 /* LoginViewPresenter.swift */; };
+		8B837C0A28C0EDEA002C7FD8 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0928C0EDEA002C7FD8 /* LoginPresenter.swift */; };
+		8B837C0C28C10105002C7FD8 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0B28C10105002C7FD8 /* RoundLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		8B837BF728C0E535002C7FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B837BF928C0E535002C7FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B837BFF28C0E54A002C7FD8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B837C0228C0EB0D002C7FD8 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		8B837C0528C0ECBE002C7FD8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8B837C0728C0ECED002C7FD8 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		8B837C0928C0EDEA002C7FD8 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		8B837C0B28C10105002C7FD8 /* RoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +70,42 @@
 			children = (
 				8B837BEB28C0E533002C7FD8 /* AppDelegate.swift */,
 				8B837BED28C0E533002C7FD8 /* SceneDelegate.swift */,
-				8B837BEF28C0E533002C7FD8 /* ViewController.swift */,
-				8B837BF128C0E533002C7FD8 /* Main.storyboard */,
+				8B837C0128C0EAF3002C7FD8 /* Model */,
+				8B837C0028C0EAEA002C7FD8 /* View */,
+				8B837C0428C0EC5E002C7FD8 /* Presenter */,
 				8B837BF428C0E535002C7FD8 /* Assets.xcassets */,
 				8B837BF628C0E535002C7FD8 /* LaunchScreen.storyboard */,
 				8B837BF928C0E535002C7FD8 /* Info.plist */,
 			);
 			path = JZGDemo;
+			sourceTree = "<group>";
+		};
+		8B837C0028C0EAEA002C7FD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B837BF128C0E533002C7FD8 /* Main.storyboard */,
+				8B837BEF28C0E533002C7FD8 /* ViewController.swift */,
+				8B837C0B28C10105002C7FD8 /* RoundLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B837C0128C0EAF3002C7FD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B837C0228C0EB0D002C7FD8 /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B837C0428C0EC5E002C7FD8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8B837C0528C0ECBE002C7FD8 /* LoginView.swift */,
+				8B837C0728C0ECED002C7FD8 /* LoginViewPresenter.swift */,
+				8B837C0928C0EDEA002C7FD8 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B837BF028C0E533002C7FD8 /* ViewController.swift in Sources */,
+				8B837C0328C0EB0D002C7FD8 /* Account.swift in Sources */,
+				8B837C0A28C0EDEA002C7FD8 /* LoginPresenter.swift in Sources */,
+				8B837C0C28C10105002C7FD8 /* RoundLabel.swift in Sources */,
 				8B837BEC28C0E533002C7FD8 /* AppDelegate.swift in Sources */,
+				8B837C0828C0ECED002C7FD8 /* LoginViewPresenter.swift in Sources */,
+				8B837C0628C0ECBE002C7FD8 /* LoginView.swift in Sources */,
 				8B837BEE28C0E533002C7FD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

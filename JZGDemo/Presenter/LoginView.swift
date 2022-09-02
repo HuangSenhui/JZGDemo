@@ -9,8 +9,8 @@ import Foundation
 
 /// 提供更新UI的方法（反馈结果）
 protocol LoginView: AnyObject {
-	func setAvater(gender: Account.Gender)
+	func setAvater(gender: Int)
 	func setButton(isEnable: Bool)
-	func login(account: Account, isCheckedPolicy: Bool)
+	func login()
 	func showToas(string: String)
 }

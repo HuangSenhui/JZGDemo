@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		presenter = LoginPresenter(view: self, account: Account())
+		presenter = LoginPresenter(view: self)
 	}
 
 	@IBAction func tappedLoginButton(_ sender: UIButton) {
@@ -35,7 +35,6 @@ class ViewController: UIViewController {
 	@IBAction func tappedPolicyButton(_ sender: UIButton) {
 		sender.isSelected.toggle()
 		presenter.isCheckedPolicy = sender.isSelected
-		presenter.updateButton()
 	}
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,12 +58,10 @@ extension ViewController: UITextFieldDelegate {
 		guard let text = textField.text else { return }
 		
 		if textField == usernameTextField {
-			presenter.account.userName = text
+			presenter.setupAccount(username: text, password: nil)
 		} else if textField == passwordTextField {
-			presenter.account.password = text
+			presenter.setupAccount(username: nil, password: text)
 		}
-		
-		presenter.updateButton()
 	}
 }
 
@@ -77,15 +74,15 @@ extension ViewController: LoginView {
 		toastView.show(text: string)
 	}
 	
-	func login(account: Account, isCheckedPolicy: Bool) {
+	func login() {
 		let vc = UIViewController()
 		vc.title = "登录成功"
 		vc.view.backgroundColor = .green
 		navigationController?.pushViewController(vc, animated: true)
 	}
 	
-	func setAvater(gender: Account.Gender) {
-		avatarImageView.tintColor = gender == .male ? .blue : .red
+	func setAvater(gender: Int) {
+		avatarImageView.tintColor = gender == 1 ? .blue : .red
 	}
 	
 }

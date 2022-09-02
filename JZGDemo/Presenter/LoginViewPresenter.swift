@@ -10,7 +10,7 @@ import Foundation
 /// 对UI进行的操作（接受任务）
 protocol LoginViewPresenter {
 	
-	init(view: LoginView, account: Account)
+	init(view: LoginView)
 	func updateAvatar(username: String)
 	func updateButton()
 }

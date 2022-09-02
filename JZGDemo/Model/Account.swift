@@ -30,9 +30,9 @@ class Account: Codable {
 
 
 extension Account {
-	enum Gender: Codable {
-		case male
-		case female
+	enum Gender: Int, Codable {
+		case male = 1
+		case female = 2
 	}
 }
 

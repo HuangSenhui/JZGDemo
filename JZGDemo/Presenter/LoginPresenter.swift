@@ -12,16 +12,21 @@ import Foundation
 class LoginPresenter: LoginViewPresenter {
 	unowned let view: LoginView
 	let account: Account
-	var isCheckedPolicy: Bool = false
+    var isCheckedPolicy: Bool = false {
+        didSet {
+            updateButton()
+        }
+    }
 	
-	required init(view: LoginView, account: Account) {
+	required init(view: LoginView) {
 		self.view = view
-		self.account = account
+		self.account = Account()
 	}
 	
 	func updateAvatar(username: String) {
-		account.fetchInfo(username: username) {
-			self.view.setAvater(gender: self.account.gender)
+		account.fetchInfo(username: username) { [weak self] in
+            guard let self = self else { return }
+            self.view.setAvater(gender: self.account.gender.rawValue)
 		}
 	}
 	
@@ -49,6 +54,18 @@ class LoginPresenter: LoginViewPresenter {
 		}
 		
 		// 登录成功
-		view.login(account: account, isCheckedPolicy: isCheckedPolicy)
+		view.login()
 	}
+    
+    func setupAccount(username: String?, password: String?) {
+        if let username = username {
+            account.userName = username
+        }
+        
+        if let pw = password {
+            account.password = pw
+        }
+        
+        updateButton()
+    }
 }

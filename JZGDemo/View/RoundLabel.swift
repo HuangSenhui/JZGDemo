@@ -10,7 +10,7 @@ import UIKit
 @IBDesignable class RoundLabel: UILabel {
 
     override func draw(_ rect: CGRect) {
-		super.draw(rect.inset(by: UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)))
+        super.draw(rect.inset(by: .init(top: 2, left: 8, bottom: 2, right: 8)))
 		
     }
     

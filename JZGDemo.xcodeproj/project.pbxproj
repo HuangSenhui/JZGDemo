@@ -18,6 +18,7 @@
 		8B837C0828C0ECED002C7FD8 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0728C0ECED002C7FD8 /* LoginViewPresenter.swift */; };
 		8B837C0A28C0EDEA002C7FD8 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0928C0EDEA002C7FD8 /* LoginPresenter.swift */; };
 		8B837C0C28C10105002C7FD8 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B837C0B28C10105002C7FD8 /* RoundLabel.swift */; };
+		8BA44FD828C1A4A400C01CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA44FD728C1A4A400C01CCB /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		8B837C0728C0ECED002C7FD8 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		8B837C0928C0EDEA002C7FD8 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		8B837C0B28C10105002C7FD8 /* RoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
+		8BA44FD728C1A4A400C01CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				8B837BEB28C0E533002C7FD8 /* AppDelegate.swift */,
 				8B837BED28C0E533002C7FD8 /* SceneDelegate.swift */,
+				8BA44FD728C1A4A400C01CCB /* ContentView.swift */,
 				8B837C0128C0EAF3002C7FD8 /* Model */,
 				8B837C0028C0EAEA002C7FD8 /* View */,
 				8B837C0428C0EC5E002C7FD8 /* Presenter */,
@@ -184,6 +187,7 @@
 				8B837C0A28C0EDEA002C7FD8 /* LoginPresenter.swift in Sources */,
 				8B837C0C28C10105002C7FD8 /* RoundLabel.swift in Sources */,
 				8B837BEC28C0E533002C7FD8 /* AppDelegate.swift in Sources */,
+				8BA44FD828C1A4A400C01CCB /* ContentView.swift in Sources */,
 				8B837C0828C0ECED002C7FD8 /* LoginViewPresenter.swift in Sources */,
 				8B837C0628C0ECBE002C7FD8 /* LoginView.swift in Sources */,
 				8B837BEE28C0E533002C7FD8 /* SceneDelegate.swift in Sources */,
